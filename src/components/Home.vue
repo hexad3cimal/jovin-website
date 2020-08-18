@@ -24,6 +24,8 @@ export default {
   width: 100%;
   min-height: 100vh;
   background: #131fe9;
+  background: -webkit-linear-gradient(to bottom, #131fe9, #0d39a9);
+  background: linear-gradient(to bottom, #131fe9, #0d39a9);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -44,7 +46,9 @@ export default {
   }
 
   .tiles-container{
-    width:100%;
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
