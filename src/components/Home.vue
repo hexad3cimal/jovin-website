@@ -9,6 +9,11 @@
     <span class="tiles">react-js</span>
     <span class="tiles">vue-js</span>
     <span class="tiles">node-js</span>
+    <span class="tiles">angular</span>
+    <span class="tiles">java</span>
+    <span class="tiles">golang</span>
+    <span class="tiles">bash</span>
+    <span class="tiles">scss</span>
   </div>
 </div>
 </template>
