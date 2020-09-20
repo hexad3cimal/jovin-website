@@ -1,26 +1,30 @@
 <template>
   <div class="home-wrapper">
-<div class="title-wrapper">
-  <div class="title">
-    Hello<span class="dots">..</span>
+    <TopNav></TopNav>
+
+    <div class="title-wrapper">
+      <div class="title">
+        <img src="../assets/images/logo.png">
+      </div>
+    </div>
+    <div class="tiles-container">
+      <span class="tiles">react-js</span>
+      <span class="tiles">vue-js</span>
+      <span class="tiles">node-js</span>
+      <span class="tiles">angular</span>
+      <span class="tiles">java</span>
+      <span class="tiles">golang</span>
+      <span class="tiles">bash</span>
+      <span class="tiles">scss</span>
+    </div>
   </div>
-</div>
-  <div class="tiles-container">
-    <span class="tiles">react-js</span>
-    <span class="tiles">vue-js</span>
-    <span class="tiles">node-js</span>
-    <span class="tiles">angular</span>
-    <span class="tiles">java</span>
-    <span class="tiles">golang</span>
-    <span class="tiles">bash</span>
-    <span class="tiles">scss</span>
-  </div>
-</div>
 </template>
 
 <script>
+import TopNav from "@/components/Home/TopNav";
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {TopNav}
 }
 </script>
 
@@ -28,9 +32,7 @@ export default {
 .home-wrapper{
   width: 100%;
   min-height: 100vh;
-  background: #131fe9;
-  background: -webkit-linear-gradient(to bottom, #131fe9, #0d39a9);
-  background: linear-gradient(to bottom, #131fe9, #0d39a9);
+  background: #fff;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
