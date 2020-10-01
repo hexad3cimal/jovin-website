@@ -8,31 +8,32 @@
       </div>
     </div>
     <div class="tiles-container">
-      <span class="tiles">react-js</span>
-      <span class="tiles">vue-js</span>
-      <span class="tiles">node-js</span>
-      <span class="tiles">angular</span>
-      <span class="tiles">java</span>
-      <span class="tiles">golang</span>
-      <span class="tiles">bash</span>
-      <span class="tiles">scss</span>
+      <Cards v-for="skill in skills" :key="skill"  :title="skill" />
     </div>
   </div>
 </template>
 
 <script>
 import TopNav from "@/components/Home/TopNav";
+import Cards from "@/components/Home/Cards";
 export default {
   name: 'Home',
-  components: {TopNav}
+  components: {Cards, TopNav},
+  data : () => {
+    return {
+      skills : ['react', 'angular', 'vue', 'node', 'golang']
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+@import "src/assets/css/colors.scss";
+
 .home-wrapper{
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background-image: radial-gradient($secondary 30%, $background 30%);
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
