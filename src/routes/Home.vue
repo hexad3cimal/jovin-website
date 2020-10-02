@@ -4,21 +4,20 @@
 
     <div class="title-wrapper">
       <div class="title">
-        <img src="../assets/images/logo.png">
+        <img class="logo" src="../assets/images/default.png">
       </div>
     </div>
     <div class="tiles-container">
-      <Cards v-for="skill in skills" :key="skill"  :title="skill" />
+      <Card v-for="skill in skills" :key="skill"  :title="skill" />
     </div>
   </div>
 </template>
 
 <script>
-import TopNav from "@/components/Home/TopNav";
-import Cards from "@/components/Home/Cards";
+import {TopNav,Card} from "@/components/Home";
 export default {
   name: 'Home',
-  components: {Cards, TopNav},
+  components: {Card, TopNav},
   data : () => {
     return {
       skills : ['react', 'angular', 'vue', 'node', 'golang']
@@ -42,15 +41,6 @@ export default {
     display: flex;
     justify-content: center;
     margin-top: 30vh;
-    width: 100%;
-    .title{
-      color: beige;
-      font-size: 20rem;
-      .dots{
-        font-size: 20rem;
-        animation:blinkingText 1.2s infinite;
-      }
-    }
   }
 
   .tiles-container{
@@ -61,25 +51,46 @@ export default {
     flex-wrap: wrap;
     flex-direction: row;
     align-content: space-evenly;
-    .tiles{
-      margin: .5rem;
-      background: black;
-      color: beige;
-      font-size: 1rem;
-      padding: 1rem;
-    }
-  }
-
-
-  @keyframes blinkingText{
-    0%{     color: beige;    }
-    49%{    color: beige; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: beige;    }
-  }
-
-
+  
+}
 }
 
+.logo:hover{
+  animation: shadow-wave 1.5s ease infinite;
+
+}
+@keyframes shadow-wave {
+  0% {
+    background-image: url('../assets/images/default.png');
+    width: 100%;
+  }
+  20% {
+    background-image: url('../assets/images/redlogo.png');
+        width: 99%;
+  }
+  40% {
+     background-image: url('../assets/images/orangelogo.png');
+         width: 100%;
+  }
+  60% {
+        background-image: url('../assets/images/yellowlogo.png');
+         width: 99%;
+
+  }
+  80% {
+        background-image: url('../assets/images/greenlogo.png');
+         width: 100%;
+
+  }
+   90% {
+        background-image: url('../assets/images/greenlogo.png');
+         width: 99%;
+
+  }
+  100% {
+      background-image: url('../assets/images/default.png');
+         width: 100%;
+  }
+
+}
 </style>
