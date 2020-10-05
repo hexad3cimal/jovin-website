@@ -58,9 +58,8 @@ export default {
   background-repeat: no-repeat;
   background-size: contain;
   padding: 1.7rem;
-  &:hover {
     animation: shadow-wave 1.5s ease infinite;
-  }
+  
 
   @keyframes shadow-wave {
     0% {
