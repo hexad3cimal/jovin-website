@@ -1,26 +1,23 @@
 <template>
-  <div id="app">
-    <div class="home-wrapper">
-    <TopNav></TopNav>
-
-    <div class="title-wrapper">
-      <div class="logo" />
+    <div class="tiles-container">
+        <Tile text="react" />
     </div>
-    <router-view/>
-    </div>
-  </div>
 </template>
-<script>
-import { TopNav } from "./components/Layout";
 
+<script>
+import { Tile} from "@/components/Blog";
 export default {
-  name: 'App',
-  components: {
-    TopNav
-  }
-}
+  name: "Home",
+  components: { Tile },
+  data: () => {
+    return {
+      skills: ["react", "angular", "vue", "node", "golang"],
+    };
+  },
+};
 </script>
-<style lang="scss">
+
+<style lang="scss" scoped>
 @import "src/assets/css/colors.scss";
 @import "src/assets/css/breakpoints.scss";
 
@@ -41,7 +38,7 @@ export default {
     .logo {
       width: 20%;
       height: 50vh;
-      background-image: url("./assets/images/default.png");
+      background-image: url("../assets/images/default.png");
       background-repeat: no-repeat;
       background-size: contain;
 
@@ -55,25 +52,25 @@ export default {
 
     @keyframes shadow-wave {
       0% {
-        background-image: url("./assets/images/default.png");
+        background-image: url("../assets/images/default.png");
       }
       20% {
-        background-image: url("./assets/images/redlogo.png");
+        background-image: url("../assets/images/redlogo.png");
       }
       40% {
-        background-image: url("./assets/images/orangelogo.png");
+        background-image: url("../assets/images/orangelogo.png");
       }
       60% {
-        background-image: url("./assets/images/yellowlogo.png");
+        background-image: url("../assets/images/yellowlogo.png");
       }
       80% {
-        background-image: url("./assets/images/greenlogo.png");
+        background-image: url("../assets/images/greenlogo.png");
       }
       90% {
-        background-image: url("./assets/images/greenlogo.png");
+        background-image: url("../assets/images/greenlogo.png");
       }
       100% {
-        background-image: url("./assets/images/default.png");
+        background-image: url("../assets/images/default.png");
       }
     }
   }
