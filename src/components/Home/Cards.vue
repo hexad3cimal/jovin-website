@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card-retro">
     <h2>
   {{title}}
     </h2>
@@ -15,7 +15,7 @@ name: "Card",
 
 <style  lang="scss" scoped>
 @import "src/assets/css/colors.scss";
-.card {
+.card-disco {
   background-color:$background;
   cursor: pointer;
   padding: 1rem 3rem;
@@ -27,13 +27,9 @@ name: "Card",
   20px -20px 0 -3px $background, 20px -20px $yellow,
   30px -30px 0 -3px $background, 30px -30px $orange,
   40px -40px 0 -3px $background, 40px -40px $red;
-}
-
-.card:hover {
+  &:hover {
   animation: shadow-wave 1s ease infinite;
 }
-
-
 @keyframes shadow-wave {
   0% {
     border: 3px solid $primary;
@@ -79,18 +75,57 @@ name: "Card",
   }
 
 }
-.card p {
+p {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
 
-.card h2 {
+h2 {
   font-size: 14px;
   font-family: "Archivo Black", "Archivo", sans-serif;
   font-weight: normal;
 }
+
+}
+
+.card-retro {
+  background-color:$background;
+  cursor: pointer;
+  padding: 1rem 3rem;
+  margin: 1.5rem;
+  border: 3px solid $primary;
+  font-size: 1rem;
+  color: $yellow;
+  animation: slidein-left 3s ease infinite;
+
+
+p {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1rem;
+    font-family: 'Press Start 2P', cursive;
+  font-weight: normal;
+  
+}
+
+@keyframes slidein-left {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+
 
 
 </style>

@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div class="home-wrapper">
-    <TopNav></TopNav>
+      <TopNav></TopNav>
 
-    <div class="title-wrapper">
-      <div class="logo" />
-    </div>
-    <router-view/>
+      <div class="title-wrapper">
+        <div class="logo-retro" />
+      </div>
+      <router-view />
     </div>
   </div>
 </template>
@@ -14,11 +14,11 @@
 import { TopNav } from "./components/Layout";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    TopNav
-  }
-}
+    TopNav,
+  },
+};
 </script>
 <style lang="scss">
 @import "src/assets/css/colors.scss";
@@ -38,7 +38,33 @@ export default {
     margin-top: 30vh;
     width: 100%;
 
-    .logo {
+    .logo-retro {
+      width: 20%;
+      height: 50vh;
+      background-image: url("./assets/images/retro.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &:hover {
+        animation: blink 0.5s ease infinite;
+      }
+      @include respond-to("small") {
+        width: 60%;
+      }
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    .logo-disco {
       width: 20%;
       height: 50vh;
       background-image: url("./assets/images/default.png");

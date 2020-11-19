@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo" />
-    <div class="logo-text">jovin thariyath</div>
+    <div class="logo-text-retro">jovin thariyath</div>
   </header>
 </template>
 
@@ -28,7 +28,13 @@ export default {
   align-items: flex-start;
 }
 
-.logo-text {
+.logo-text-retro{
+  font-size: 3rem;
+  font-family: 'Press Start 2P', cursive;
+  color: #fe2802;
+}
+
+.logo-text-disco {
   margin-left: 1rem;
   color: white;
   font: bold 2rem Helvetica, Arial, Sans-Serif;
@@ -47,7 +53,7 @@ export default {
   }
 }
 
-.logo {
+.logo-disco {
   background-image: url("../../assets/images/default.png");
   background-repeat: no-repeat;
   background-size: contain;
