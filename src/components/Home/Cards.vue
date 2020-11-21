@@ -15,6 +15,8 @@ name: "Card",
 
 <style  lang="scss" scoped>
 @import "src/assets/css/colors.scss";
+$outline-width: 6px;
+$shadow-width: 4px;
 .card-disco {
   background-color:$background;
   cursor: pointer;
@@ -99,7 +101,27 @@ h2 {
   font-size: 1rem;
   color: $yellow;
   animation: slidein-left 3s ease infinite;
+     &:before,
+    &:after {
+    content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: content-box;
+    }
+    &:before {
+        top: -$outline-width;
+        left: 0;
+        border-top: $outline-width black solid;
+        border-bottom: $outline-width black solid;
+    }
 
+    &:after {
+        left: -$outline-width;
+        top: 0;
+        border-left: $outline-width black solid;
+        border-right: $outline-width black solid;
+    }
 
 p {
   font-size: 11px;
