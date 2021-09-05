@@ -3,8 +3,9 @@
   <div v-if="!loading" class="home">
     <Title />
 
-    <IntroCard />
     <PictureCard :src="src" />
+    <IntroCard />
+
     <div class="skills-container">
       <Skill v-for="skill in skills" :key="skill" :skill="skill" />
     </div>
@@ -32,23 +33,10 @@ export default class Home extends Vue {
   private skills: Array<string> = [
     "react",
     "angular",
-    "vue",
-    "node",
-    "golang",
-    "java",
-    "python"
+    "node"
   ];
-  private src = require("../assets/jovin.png");
-  private loading = true;
+  private loading = false;
 
-  beforeMount() {
-    const myImage = new Image();
-    myImage.src = this.src;
-    myImage.onload = () => {
-      this.src = myImage.src;
-      this.loading = false;
-    };
-  }
 }
 </script>
 <style scoped lang="scss">
@@ -56,18 +44,15 @@ export default class Home extends Vue {
   display: flex;
   justify-content: center;
   align-content: center;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
-  margin: 2rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 100%;
-  padding: 2rem;
   .skills-container {
-    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-self: center;
   }
 }
 </style>

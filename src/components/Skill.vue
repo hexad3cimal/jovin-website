@@ -42,7 +42,7 @@ button {
     }
     &:before {
       background: black;
-      border: 0px dashed black;
+      border: 0 dashed black;
       left: 0.125em * -1;
       top: 0.125em * -1;
       right: 0.125em * -1;

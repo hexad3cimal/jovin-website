@@ -1,6 +1,8 @@
 <template>
-  <div class="intro-card">
-    Hi, I am a web developer from Bangalore, India.
+  <div class="intro-card-container">
+    <div class="intro-card">
+      Hi, I am a web developer from Bangalore, India.
+    </div>
   </div>
 </template>
 
@@ -11,12 +13,20 @@ export default class IntroCard extends Vue {}
 </script>
 
 <style scoped lang="scss">
-.intro-card {
-  width: 70%;
+.intro-card-container {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  font-size: 5rem;
-  font-weight: 800;
+  flex-direction: row;
+  justify-content: space-around;
+  .intro-card {
+    display: flex;
+    font-size: 5rem;
+    font-weight: 800;
+  }
+}
+
+@media only screen and (min-device-width: 400px) {
+  .intro-card {
+    width: 30%;
+  }
 }
 </style>
