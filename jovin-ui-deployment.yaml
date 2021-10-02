@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jovin-ui
+  labels:
+    app: jovin-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jovin-ui
+  template:
+    metadata:
+      labels:
+        app: jovin-ui
+    spec:
+      containers:
+        - name: localhost:5000/jovin-ui
+          image: jovin-ui
+          ports:
+            - containerPort: 8080

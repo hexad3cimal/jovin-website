@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: jovin-ui-service
+spec:
+  selector:
+    app: jovin-ui
+  ports:
+    - port: 8080
