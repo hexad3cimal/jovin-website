@@ -15,7 +15,7 @@ spec:
         app: jovin-ui
     spec:
       containers:
-        - name: localhost:5000/jovin-ui
-          image: jovinui
+        - name: jovin-ui
+          image: localhost:5000/jovin-ui
           ports:
             - containerPort: 8080
