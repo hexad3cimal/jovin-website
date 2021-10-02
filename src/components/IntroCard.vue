@@ -16,7 +16,6 @@ export default class IntroCard extends Vue {}
 .intro-card-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   .intro-card {
     display: flex;
     font-size: 5rem;

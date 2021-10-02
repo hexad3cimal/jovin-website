@@ -12,8 +12,8 @@
     <div class="system-earth4">
       <img src="../assets/react.png" class="jet" />
     </div>
-    <div class="picture1" @load="imageLoaded" />
     <div class="picture2" @load="imageLoaded" />
+    <div class="picture1" @load="imageLoaded" />
   </div>
 </template>
 

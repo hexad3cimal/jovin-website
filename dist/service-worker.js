@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.db049cc2198f7aa0d433c66acd1d68f4.js"
+  "/precache-manifest.90c28ddf7d02141eb96b7347547173d9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "jovin-thariyath"});
