@@ -16,6 +16,8 @@ spec:
     spec:
       containers:
         - name: jovin-ui
-          image: localhost:5000/jovin-ui
+          image: hexad3/virtualmenus:jovinui
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred

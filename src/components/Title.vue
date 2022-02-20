@@ -15,6 +15,7 @@ export default class Title extends Vue {}
 .title {
   display: flex;
   width: 100%;
+  padding-left: 2rem;
   .title-text {
     font-size: 2rem;
     text-align: center;

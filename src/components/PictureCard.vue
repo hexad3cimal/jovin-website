@@ -155,14 +155,14 @@ export default class PictureCard extends Vue {
   flex-direction: row;
   justify-content: center;
   .picture2 {
-    width: 25%;
-    background: url("../assets/jovi1.png") no-repeat right;
+    width: 50%;
+    background: url("../assets/iamjovin1.png") no-repeat right;
     background-size: contain;
     height: 100%;
     z-index: 2;
   }
   .picture1 {
-    width: 25%;
+    width: 50%;
     background: url("../assets/jovi2.png") no-repeat left;
     background-size: contain;
     height: 100%;

@@ -60,7 +60,7 @@ import Loader from "@/components/Loader.vue"; // @ is an alias to /src
   }
 })
 export default class Home extends Vue {
-  private skills: Array<string> = ["react", "angular", "node"];
+  private skills: Array<string> = ["react", "angular", "node", "java", "golang"];
   private loading = false;
 }
 </script>
@@ -82,7 +82,7 @@ export default class Home extends Vue {
 }
 .steam {
   position: absolute;
-  height: 150px;
+  height: 250px;
   width: 150px;
   border-radius: 50%;
   background-color: #fff;
@@ -162,13 +162,13 @@ export default class Home extends Vue {
 }
 
 #cup-body {
-  height: 500px;
-  width: 300px;
+  height: 28rem;
+  width: 18rem;
   margin: auto;
   display: inline-block;
   overflow: hidden;
   z-index: 1;
-  background: url("../assets/background.png") no-repeat left;
+  background: url("../assets/iamjovin1.png") no-repeat bottom;
   background-size: contain;
   border-left: black solid 10px;
   border-right: black solid 10px;

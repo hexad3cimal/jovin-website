@@ -1,7 +1,7 @@
 <template>
   <div class="intro-card-container">
     <div class="intro-card">
-      Hi, I am a web developer from Bangalore, India.
+      Hi, I am a web developer who loves to develop webapps using
     </div>
   </div>
 </template>
