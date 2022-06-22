@@ -12,8 +12,6 @@
     <div class="system-earth4">
       <img src="../assets/react.png" class="jet" />
     </div>
-    <div class="picture2" @load="imageLoaded" />
-    <div class="picture1" @load="imageLoaded" />
   </div>
 </template>
 
@@ -156,18 +154,12 @@ export default class PictureCard extends Vue {
   justify-content: center;
   .picture2 {
     width: 50%;
-    background: url("../assets/iamjovin1.png") no-repeat right;
+    background: url("../assets/wave.png") no-repeat right;
     background-size: contain;
     height: 100%;
     z-index: 2;
   }
-  .picture1 {
-    width: 50%;
-    background: url("../assets/jovi2.png") no-repeat left;
-    background-size: contain;
-    height: 100%;
-    z-index: 2;
-  }
+
 
   &:hover {
     justify-content: space-between;

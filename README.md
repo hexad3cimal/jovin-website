@@ -1,3 +1,3 @@
-# iamjov-in
+# jovin.website
 
-source code of www.iamjov.in
+source code of jovin.website

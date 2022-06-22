@@ -60,7 +60,13 @@ import Loader from "@/components/Loader.vue"; // @ is an alias to /src
   }
 })
 export default class Home extends Vue {
-  private skills: Array<string> = ["react", "angular", "node", "java", "golang"];
+  private skills: Array<string> = [
+    "react",
+    "angular",
+    "node",
+    "java",
+    "golang"
+  ];
   private loading = false;
 }
 </script>
@@ -159,6 +165,8 @@ export default class Home extends Vue {
 #cup {
   z-index: 1;
   position: relative;
+  background: rgb(246 247 247);
+  opacity: 0.7;
 }
 
 #cup-body {
@@ -168,13 +176,21 @@ export default class Home extends Vue {
   display: inline-block;
   overflow: hidden;
   z-index: 1;
-  background: url("../assets/iamjovin1.png") no-repeat bottom;
-  background-size: contain;
+  background: url("../assets/wave.png") repeat-x bottom;
+  animation: filling 10s ease-in-out infinite;
   border-left: black solid 10px;
   border-right: black solid 10px;
   border-bottom: black solid 10px;
 }
 
+@keyframes filling {
+  50% {
+    background-position: 6000px 350px;
+  }
+  75% {
+    background-position: 3000px 0;
+  }
+}
 .home {
   display: flex;
   flex-direction: column;
